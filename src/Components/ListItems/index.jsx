@@ -1,16 +1,14 @@
-import index from './index.css'
+import './index.css'
 
 function ListItems(props){
-    const {value,checked}=props
-    console.log(checked)
-    
+    const {value}=props
     return(
        <li className='todo-list-items'>
         <div>
         <input type="checkbox"className='todo-checkbox'/>
         <label>{value}</label>
         </div>
-        <p>{checked}</p>
+        {checked?(<p className='todo-checked'>complete</p>):''}
        </li>  
     )
 }
